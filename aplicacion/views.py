@@ -2,5 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from data.models import receta
+from data.models import medico
+from data.models import paciente
 
-# Create your views here.
+def receta():
+    
+    return render(request, 'receta.html', error="PRUEBA")
