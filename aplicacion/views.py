@@ -8,4 +8,8 @@ from aplicacion.models import paciente
 
 def receta(request):
     
-    return render(request, 'receta.html', error="PRUEBA")
+    _dict = {'category': None,
+             'error': "prueba"
+	}
+    
+    return render(request, 'receta.html', _dict)
