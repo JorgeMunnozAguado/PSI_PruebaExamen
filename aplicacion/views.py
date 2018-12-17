@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-from data.models import receta
-from data.models import medico
-from data.models import paciente
+from aplicacion.models import receta
+from aplicacion.models import medico
+from aplicacion.models import paciente
 
 def receta():
     
