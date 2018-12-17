@@ -26,7 +26,8 @@ SECRET_KEY = 'c1tb)f7wq)q58k27(xxet-@$=8f_hd+c=d2)$eqhds=2@3u6w='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [u'dry-hamlet-15613.herokuapp.com',
+                 u'127.0.0.1']
 
 
 # Application definition
