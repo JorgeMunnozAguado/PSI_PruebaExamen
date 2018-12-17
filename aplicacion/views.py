@@ -6,6 +6,6 @@ from aplicacion.models import receta
 from aplicacion.models import medico
 from aplicacion.models import paciente
 
-def receta():
+def receta(request):
     
     return render(request, 'receta.html', error="PRUEBA")
