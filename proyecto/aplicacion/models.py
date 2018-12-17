@@ -39,8 +39,8 @@ class medico(models.Model):
 class receta(models.Model):
 
     nombreM = models.CharField( max_length=500, blank=False )
-    models.ForeignKey(medico)
-    models.ForeignKey(paciente)
+    medId = models.ForeignKey(medico)
+    pacId = models.ForeignKey(paciente)
 
     # def save(self, *args, **kwargs):
     #     self.slug = slugify(self.name)
