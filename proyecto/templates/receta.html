@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+{% if error %}
+{{ error }}
+{% endif %}
+<t a bl e>
+{% for receta in recetas %}
+<t r>
+<th>{{ receta.id }}</th>
+<td>{{ receta.paciente.nombreP }}</td>
+<td>{{ receta.medico.nombreM }}</td>
+</t r>
+{% endfor %}
+</ t a bl e>
+</body>
+</html>
+
