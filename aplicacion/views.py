@@ -8,8 +8,15 @@ from aplicacion.models import paciente
 
 def receta(request):
     
-    _dict = {'category': None,
-             'error': "prueba"
-	}
+    _dict = {}
+	try:
+		lista_recetas = receta.objects.all()[-3:] 
+        
+		_dict['receta'] = lista_recetas
+		_dict['error'] = None
+        
+	except:
+		_dict['receta'] = None
+		_dict['error'] = "Error al acceder a la base de datos"
     
     return render(request, 'receta.html', _dict)
