@@ -12,4 +12,4 @@ def receta(request):
              'error': "prueba"
 	}
     
-    return render(request, 'aplicacion/receta.html', _dict)
+    return render(request, 'receta.html', _dict)
