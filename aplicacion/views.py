@@ -10,11 +10,11 @@ def receta(request):
     
     _dict = {}
     
-    try:
-        lista_recetas = list(receta.objects.all())
+    
+    lista_recetas = list(receta.objects.all())
 
-        _dict['receta'] = lista_recetas
-        _dict['error'] = None
+    _dict['receta'] = lista_recetas
+    _dict['error'] = None
 
     #except:
     #    _dict['receta'] = None
