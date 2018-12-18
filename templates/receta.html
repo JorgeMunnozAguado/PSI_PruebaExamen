@@ -5,15 +5,15 @@
 {% if error %}
 {{ error }}
 {% endif %}
-<t a bl e>
+<table>
 {% for receta in recetas %}
-<t r>
+<tr>
 <th>{{ receta.id }}</th>
 <td>{{ receta.paciente.nombreP }}</td>
 <td>{{ receta.medico.nombreM }}</td>
-</t r>
+</tr>
 {% endfor %}
-</ t a bl e>
+</table>
 </body>
 </html>
 

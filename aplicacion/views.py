@@ -6,18 +6,18 @@ from aplicacion.models import receta
 from aplicacion.models import medico
 from aplicacion.models import paciente
 
-def receta(request):
+def receta_list(request):
     
     _dict = {}
     
-    
-    lista_recetas = list(receta.objects.all())
+    try:
+        lista_recetas =list(receta.objects.all())[-3:]
 
-    _dict['receta'] = lista_recetas
-    _dict['error'] = None
+        _dict['recetas'] = lista_recetas
+        _dict['error'] = None
 
-    #except:
-    #    _dict['receta'] = None
-    #    _dict['error'] = "Error al acceder a la base de datos"
+    except:
+        _dict['recetas'] = None
+        _dict['error'] = "Error al acceder a la base de datos"
     
     return render(request, 'receta.html', _dict)

@@ -7,13 +7,6 @@ from django.db import models
 class paciente(models.Model):
 
     nombreP = models.CharField( max_length=500, blank=False )
-
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.name)
-    #     super(paciente, self).save(*args, **kwargs)
-        
-    # class Meta:
-    #     verbose_name_plural = 'Paciente'
     
     def __str__(self):
         return self.nombreP
@@ -23,13 +16,6 @@ class paciente(models.Model):
 class medico(models.Model):
 
     nombreM = models.CharField( max_length=500, blank=False )
-
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.name)
-    #     super(medico, self).save(*args, **kwargs)
-        
-    # class Meta:
-    #     verbose_name_plural = 'Medico'
     
     def __str__(self):
         return self.nombreM
@@ -38,18 +24,11 @@ class medico(models.Model):
 # Modelo del la receta
 class receta(models.Model):
 
-    medId = models.ForeignKey(medico, null=True )
-    pacId = models.ForeignKey(paciente, null=True)
-
-    # def save(self, *args, **kwargs):
-    #     self.slug = slugify(self.name)
-    #     super(medico, self).save(*args, **kwargs)
-        
-    # class Meta:
-    #     verbose_name_plural = 'Receta'
+    medico = models.ForeignKey(medico, null=True )
+    paciente = models.ForeignKey(paciente, null=True)
     
     def __str__(self):
-        return self.medId
+        return str(self.id)
         
         
         

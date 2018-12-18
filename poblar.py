@@ -41,27 +41,27 @@ def populate():
     
     med = medico.objects.get_or_create(id=1)[0]
     pac = paciente.objects.get_or_create(id=1)[0]
-    c = receta.objects.get_or_create(medId=med, pacId=pac)[0]
+    c = receta.objects.get_or_create(medico=med, paciente=pac)[0]
     c.save()
         
     med = medico.objects.get_or_create(id=2)[0]
     pac = paciente.objects.get_or_create(id=1)[0]
-    c = receta.objects.get_or_create(medId=med, pacId=pac)[0]
+    c = receta.objects.get_or_create(medico=med, paciente=pac)[0]
     c.save()
         
     med = medico.objects.get_or_create(id=1)[0]
     pac = paciente.objects.get_or_create(id=2)[0]
-    c = receta.objects.get_or_create(medId=med, pacId=pac)[0]
+    c = receta.objects.get_or_create(medico=med, paciente=pac)[0]
     c.save()
         
     med = medico.objects.get_or_create(id=2)[0]
     pac = paciente.objects.get_or_create(id=2)[0]
-    c = receta.objects.get_or_create(medId=med, pacId=pac)[0]
+    c = receta.objects.get_or_create(medico=med, paciente=pac)[0]
     c.save()
         
     med = medico.objects.get_or_create(id=3)[0]
     pac = paciente.objects.get_or_create(id=1)[0]
-    c = receta.objects.get_or_create(medId=med, pacId=pac)[0]
+    c = receta.objects.get_or_create(medico=med, paciente=pac)[0]
     c.save()
 
 
