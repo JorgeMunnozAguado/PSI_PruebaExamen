@@ -16,7 +16,7 @@ class paciente(models.Model):
     #     verbose_name_plural = 'Paciente'
     
     def __str__(self):
-        return self.name
+        return self.nombreP
 
 
 # Modelo del medico
@@ -32,7 +32,7 @@ class medico(models.Model):
     #     verbose_name_plural = 'Medico'
     
     def __str__(self):
-        return self.name
+        return self.nombreM
 
 
 # Modelo del la receta
@@ -49,7 +49,7 @@ class receta(models.Model):
     #     verbose_name_plural = 'Receta'
     
     def __str__(self):
-        return self.name
+        return self.medId
         
         
         
